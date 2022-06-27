@@ -63,6 +63,20 @@ p {
 }
 
 /* header start */
+@keyframes rotate{
+    0% {
+    transform: rotate(0) scale(1.2);    
+    filter: hue-rotate(0);
+    }
+    15% {
+        
+    }
+    100% {
+        transform: rotate(360deg);
+        filter: hue-rotate(180deg);
+    }
+    
+}
 .logo::before {
     content: url(../img/svg/logo-light.svg);
 }
@@ -154,4 +168,106 @@ top: 0;
 .header__tech-card:nth-of-type(3) {
     color: #790FF1;
 }
+
+
+.header__carousel-indicators{
+    position: static;
+    margin: 50px 0 0 !important;
+    order: 1;
+    gap: 30px;
+}
+.header__carousel-dot {
+    width: 15px !important;
+    height: 15px !important;
+    border-radius: 50%;
+    background-color: var(--dots-color) !important;
+    opacity:  unset !important; 
+    margin: 0 !important;
+}
+.header__carousel-dot.active {
+    background-color: var(--dots-color-active) !important;
+}
+
+.header__nav {
+    position: relative;
+}
+
+.header__nav::before{
+    content: '';
+    position: absolute;
+    width: 3.5vw;
+    height: 3.5vw;
+    border: .3vw solid #790FF1;
+    top: 32px;
+    left: 243px;
+    border-radius: 50%;
+    animation: rotate 2s linear infinite alternate;
+    z-index: -1;
+}
+.header__nav::after{
+    content: '';
+    position: absolute;
+    width: 4vw;
+    height: 4vw;
+    border: .3vw solid #9297EF;
+    top: 92px;
+    left: 17px;
+    animation: rotate 2s linear infinite alternate;
+    z-index: -1;
+}
+.header__content::before{
+    content: '';
+    position: absolute;
+    width: 4vw;
+    height: 4vw;
+    border: .3vw solid #790FF1;
+    top: 92px;
+    right: 100px;
+    animation: rotate 2s linear infinite alternate;
+    z-index: -1;
+}
+.header__content::after{
+    content: '';
+    position: absolute;
+    width: 4vw;
+    height: 4vw;
+    border: .3vw solid #9297EF;
+    top: 60%;
+    right: 200px;
+    animation: rotate 2s linear infinite alternate;
+    z-index: -1;
+}
 /* header end  */
+/* about start  */ 
+.about{
+     padding:  70px 0 90px ;
+}
+.about__work { 
+line-height: 100%;
+    padding: 24px 20px;
+    position: relative;
+    transform: translate(-40%, 100%);
+}
+.about__work-span {
+    width: 40px;
+    height: 40px;
+    font-style: italic;
+    border-radius: 50%;
+    background: #0FDAC2;    
+    font-size: 18px;
+    font-weight: 700;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: -14px;
+    right: -14px;
+}
+.about__desc{
+    background: var(--body);
+    box-shadow: 0px 0px 5px 3px #7177F126; 
+    border-radius: 8px;
+    padding: 30px;
+
+}
+
+/* about end  */
