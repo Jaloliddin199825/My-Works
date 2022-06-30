@@ -63,20 +63,21 @@ p {
 }
 
 /* header start */
-@keyframes rotate{
+@keyframes rotate {
     0% {
-    transform: rotate(0) scale(1.2);    
-    filter: hue-rotate(0);
+        transform: rotate(0) scale(1.2);
+        filter: hue-rotate(0);
     }
-    15% {
-        
-    }
+
+    15% {}
+
     100% {
         transform: rotate(360deg);
         filter: hue-rotate(180deg);
     }
-    
+
 }
+
 .logo::before {
     content: url(../img/svg/logo-light.svg);
 }
@@ -93,12 +94,13 @@ p {
     border: none;
     transition: .4s;
     padding: 0;
-;
+    ;
 }
 
 .header__menu:focus {
     box-shadow: unset;
 }
+
 .header__menu.collapsed {
     background: var(--txt-color);
 }
@@ -114,76 +116,91 @@ p {
     transition: .4s;
 
 }
-.header__menu::after{ 
+
+.header__menu::after {
     top: 10px;
 }
+
 .header__menu::before {
-top: -10px;
+    top: -10px;
 }
-.header__menu:not(.collapsed)::before{
-transform: rotate(45deg);
-top: 0;
+
+.header__menu:not(.collapsed)::before {
+    transform: rotate(45deg);
+    top: 0;
 }
-.header__menu:not(.collapsed)::after{
-transform: rotate(-45deg);
-top: 0;
+
+.header__menu:not(.collapsed)::after {
+    transform: rotate(-45deg);
+    top: 0;
 }
+
 .header__carousel-img {
     max-width: 500px;
 }
+
 .header__content-subtitle {
     font-size: 24px;
     font-weight: 600;
     color: var(--txt-color);
     text-transform: capitalize;
     margin-bottom: 10px;
-    
+
 }
-.header__content-title{
+
+.header__content-title {
     margin-bottom: 25px;
 }
+
 .header__content-btn {
     max-width: 300px;
     width: 100%;
     margin: 0 auto 50px;
     display: block;
 }
+
 .header__tech-card {
     display: grid;
     place-items: center;
     row-gap: 15px;
 }
+
 .header__tech-name {
     font-size: 20px;
     font-weight: 900;
     color: var(--primary-color);
     text-transform: uppercase;
 }
+
 .header__tech-card:nth-of-type(1) {
     color: #E44F26;
 }
+
 .header__tech-card:nth-of-type(2) {
     color: #1572B6;
 }
+
 .header__tech-card:nth-of-type(3) {
     color: #790FF1;
 }
 
 
-.header__carousel-indicators{
+.header__carousel-indicators {
     position: static;
     margin: 50px 0 0 !important;
     order: 1;
     gap: 30px;
 }
+
 .header__carousel-dot {
     width: 15px !important;
     height: 15px !important;
     border-radius: 50%;
     background-color: var(--dots-color) !important;
-    opacity:  unset !important; 
+    opacity: unset !important;
     margin: 0 !important;
 }
+
 .header__carousel-dot.active {
     background-color: var(--dots-color-active) !important;
 }
@@ -192,7 +209,7 @@ top: 0;
     position: relative;
 }
 
-.header__nav::before{
+.header__nav::before {
     content: '';
     position: absolute;
     width: 3.5vw;
@@ -204,7 +221,8 @@ top: 0;
     animation: rotate 2s linear infinite alternate;
     z-index: -1;
 }
-.header__nav::after{
+
+.header__nav::after {
     content: '';
     position: absolute;
     width: 4vw;
@@ -215,7 +233,8 @@ top: 0;
     animation: rotate 2s linear infinite alternate;
     z-index: -1;
 }
-.header__content::before{
+
+.header__content::before {
     content: '';
     position: absolute;
     width: 4vw;
@@ -226,7 +245,8 @@ top: 0;
     animation: rotate 2s linear infinite alternate;
     z-index: -1;
 }
-.header__content::after{
+
+.header__content::after {
     content: '';
     position: absolute;
     width: 4vw;
@@ -237,23 +257,36 @@ top: 0;
     animation: rotate 2s linear infinite alternate;
     z-index: -1;
 }
+
 /* header end  */
-/* about start  */ 
-.about{
-     padding:  70px 0 90px ;
+/* about start  */
+.about {
+    padding: 70px 0 90px;
+    position: relative;
 }
-.about__work { 
-line-height: 100%;
+
+.about::after {
+    content: url(../img/svg/figure_1.svg);
+    position: absolute;
+    top: -65%;
+    right: 0;
+    z-index: -1;
+}
+
+.about__work {
+    line-height: 100%;
     padding: 24px 20px;
     position: relative;
-    transform: translate(-40%, 100%);
+    transform: translateY(100%);
+    display: block;
 }
+
 .about__work-span {
     width: 40px;
     height: 40px;
     font-style: italic;
     border-radius: 50%;
-    background: #0FDAC2;    
+    background: #0FDAC2;
     font-size: 18px;
     font-weight: 700;
     display: grid;
@@ -262,12 +295,100 @@ line-height: 100%;
     top: -14px;
     right: -14px;
 }
-.about__desc{
+
+.about__desc {
     background: var(--body);
-    box-shadow: 0px 0px 5px 3px #7177F126; 
+    box-shadow: 0px 0px 5px 3px #7177F126;
     border-radius: 8px;
     padding: 30px;
-
+    display: grid;
+    row-gap: 25px;
 }
 
+
 /* about end  */
+/* capabilities start */
+.row {
+    row-gap: 20px;
+}
+.capabilities {
+    padding-bottom: 75px;
+}
+
+.capabilities__title {
+    padding-bottom: 30px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.accordion__item:nth-of-type(1) .accordion__button.collapsed .accordion__brand {
+    color: #E44F26;
+}
+
+.accordion__item:nth-of-type(2) .accordion__button.collapsed .accordion__brand {
+    color: #1572B6;
+}
+
+.accordion__item:nth-of-type(3) .accordion__button.collapsed .accordion__brand {
+    color: #790FF1;
+}
+
+.accordion {
+    box-shadow: 0px 0px 5px 3px #7177F126;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accordion__button {
+    font-size: 18px;
+    font-weight: 900;
+    color: #fff;
+    width: 100%;
+    border: 0;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    padding: 15px 30px;
+    transition: .4s;
+}
+
+.accordion__body {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 25px 30px;
+    font-size: 18px;
+    line-height: 150%;
+}
+.accordion__button.collapsed {
+    background: var(--body);
+    color: var(--primary-color);
+}
+.accordion__icon-down  {
+    font-size: 25px;
+    transform: rotate(180deg);
+    transition: .5s;
+}
+.accordion__button.collapsed .accordion__icon-down {
+    transform: rotate(0);
+}
+.capabilities__img{
+    max-width: 550px;
+    width: 100%;
+}
+.accordion__item:nth-child(1) {
+    border-bottom: 2px solid #fff;
+}
+.accordion__item:nth-child(2) {
+    border-bottom: 2px solid #fff;
+}
+.accordion__item:nth-child(1).accordion__button .collapsed  {
+    opacity: 0;
+
+}
+.accordion__item:nth-child(2).accordion__button .collapsed  {
+    opacity: 0;
+
+}
+ 
+/* capabilities end */
