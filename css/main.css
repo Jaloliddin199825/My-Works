@@ -402,7 +402,27 @@ p {
 
 .works {
     padding-bottom: 220px;
+    position: relative;
+}
 
+.works::after {
+    content: url(../img/svg/figure_2.svg);
+    position: absolute;
+    top: -35%;
+    left: 0;
+    z-index: -1;
+}
+
+.works::before {
+    content: '';
+    position: absolute;
+    border: 0.3vw solid var(--primary-color);
+    top: 50%;
+    right: 5%;
+    width: 5vw;
+    height: 5vw;
+    animation: rotate 3s infinite alternate;
+    z-index: -1;
 }
 
 .works__title {
@@ -453,19 +473,87 @@ p {
     object-fit: cover;
     object-position: top;
 }
-.works__tab-title{
-     font-size: 24px;
-     font-weight: 600;
-     color: var(--primary-color);
+
+.works__tab-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--primary-color);
 }
-.works__tab-txt{
+
+.works__tab-txt {
     font-size: 18px;
     line-height: 150%;
     color: var(--txt-color);
 }
+
 .works__tab-btn {
     font-weight: 600;
     text-transform: capitalize;
 }
 
+.img-tab {
+    transition: .4s;
+}
+
+.img-tab:hover {
+    transform: scale(1.1);
+}
+
 /* works end */
+/* footer start*/
+.footer__link {
+    color: var(--footer-link-color);
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__link:hover {
+    color: var(--footer-link-color);
+
+}
+
+.footer__link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--footer-link-color);
+    transition: .5s;
+    border-radius: 23px 10px 0px 0px;
+}
+
+.footer__link:hover::after {
+    width: 100%;
+}
+.footer{
+    padding-bottom: 133px;
+    position: relative;
+}
+.footer::after {
+    content: '';
+    position: absolute;
+    width: 3.5vw;
+    height: 3.5vw;
+    border: 0.3vw solid #790FF1;
+    top: 32px;
+    left: 300px;
+    border-radius: 50%;
+    animation: rotate 2s linear infinite alternate;
+    z-index: -1;
+}
+.footer::before {
+    content: '';
+    position: absolute;
+    width: 3.5vw;
+    height: 3.5vw;
+    border: 0.3vw solid #790FF1;
+    top: -157px;
+    right: 550px;
+    border-radius: 50%;
+    animation: rotate 2s linear infinite alternate;
+    z-index: -1;
+}
+
+/* footer end */
